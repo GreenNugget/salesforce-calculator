@@ -4,7 +4,6 @@ export default class calculator extends LightningElement {
     firstOperand = " ";
     secondOperand = " ";
     operator = " ";
-    _result;
 
     handleOperand(event){
         if (this.firstOperand == " " && this.operator==" "){
@@ -21,8 +20,15 @@ export default class calculator extends LightningElement {
     }
 
     handleOperator(event){
-        this.operator = event.target.value;
-        console.log(this.operator);
+        if(this.operator == " "){
+            this.operator = event.target.value;
+            console.log(this.operator);
+        }else{
+            this.firstOperand = " ";
+            this.secondOperand = " ";
+            this.operator = " ";
+            console.log("ERROR!, no pueden haber 2 operadores seguidos!!");
+        }
     }
 
     handleOperation(event){
@@ -44,35 +50,10 @@ export default class calculator extends LightningElement {
         this.operator = " ";
     }
 
-    
-/*
-    handleFirstOperand(event) {
-        this.firstOperand = event.detail.value;
-        this.emitEvent();
-    }
-    handleSecondOperand(event) {
-        this.secondOperand = event.detail.value;
-        this.emitEvent();
+    cleanOperation(){
+        this.firstOperand = " ";
+        this.secondOperand = " ";
+        this.operator = " ";
     }
 
-    get isValid() {
-        return this.firstOperand && this.secondOperand;
-    }
-
-    get result() {
-        if (this.isValid) {
-            return +this.firstOperand + +this.secondOperand;
-        }
-        return 'Llena los campos';
-    }
-
-    emitEvent() {
-        if (this.isValid) {
-            this.dispatchEvent(
-                new CustomEvent('notify', {
-                    detail: this.result
-                })
-            );
-        }
-    }*/
 }
