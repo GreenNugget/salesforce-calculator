@@ -1,0 +1,56 @@
+<template>
+    <lightning-layout multiple-rows="true">
+        <lightning-layout-item padding="around-small" size="5">
+            <lightning-input type="number" label="Press the buttons to enter values"></lightning-input>
+        </lightning-layout-item>
+
+         <lightning-button label="Resultado" title="Non-primary action" onclick={handleOperation} class="slds-m-left_x-small"></lightning-button>
+
+        <!-- Operators -->
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="+" value="+" onclick={handleOperator}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="-" value="-" onclick={handleOperator}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="*" value="*" onclick={handleOperator}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="/" value="/" onclick={handleOperator}></lightning-button>
+        </lightning-layout-item>
+
+
+        <!-- Numbers -->
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="1" value="1" onclick={handleOperand}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="2" value="2" onclick={handleOperand}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="3" value="3" onclick={handleOperand}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="4" value="4" onclick={handleOperand}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="5" value="5" onclick={handleOperand}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="6" value="6" onclick={handleOperand}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="7" value="7" onclick={handleOperand}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="8" value="8" onclick={handleOperand}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="9" value="9" onclick={handleOperand}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="4">
+            <lightning-button variant="brand" label="0" value="0" onclick={handleOperand}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
