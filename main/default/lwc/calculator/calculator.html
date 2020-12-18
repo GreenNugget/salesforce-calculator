@@ -1,24 +1,24 @@
 <template>
     <lightning-layout multiple-rows="true">
         <lightning-layout-item padding="around-small" size="5">
-            <lightning-input type="number" label="Press the buttons to enter values"></lightning-input>
+            <lightning-input type="text" label="Press the buttons to enter values" value={operation} readonly></lightning-input>
         </lightning-layout-item>
 
-        <lightning-button label="Resultado" title="Non-primary action" onclick={handleOperation} class="slds-m-left_x-small"></lightning-button>
-        <lightning-button label="Limpiar" title="Non-primary action" onclick={cleanOperation} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="success" label="Result" title="Non-primary action" class="slds-m-left_x-small" onclick={handleOperation}></lightning-button>
+        <lightning-button variant="destructive-text" label="Clean" title="Non-primary action" class="slds-m-left_x-small" onclick={cleanOperation}></lightning-button>
 
         <!-- Operators -->
         <lightning-layout-item padding="around-small" size="4">
-            <lightning-button variant="brand" label="+" value="+" onclick={handleOperator}></lightning-button>
+            <lightning-button variant="brand-outline" label="+" value="+" onclick={handleOperator}></lightning-button>
         </lightning-layout-item>
         <lightning-layout-item padding="around-small" size="4">
-            <lightning-button variant="brand" label="-" value="-" onclick={handleOperator}></lightning-button>
+            <lightning-button variant="brand-outline" label="-" value="-" onclick={handleOperator}></lightning-button>
         </lightning-layout-item>
         <lightning-layout-item padding="around-small" size="4">
-            <lightning-button variant="brand" label="*" value="*" onclick={handleOperator}></lightning-button>
+            <lightning-button variant="brand-outline" label="*" value="*" onclick={handleOperator}></lightning-button>
         </lightning-layout-item>
         <lightning-layout-item padding="around-small" size="4">
-            <lightning-button variant="brand" label="/" value="/" onclick={handleOperator}></lightning-button>
+            <lightning-button variant="brand-outline" label="/" value="/" onclick={handleOperator}></lightning-button>
         </lightning-layout-item>
 
 
